@@ -14,7 +14,7 @@ public class JokesController {
         this.quoteService = quoteService;
     }
 
-    @RequestMapping("/")
+    @RequestMapping({"/",""})
     public String getJokes(Model model){
 
         model.addAttribute("joke",quoteService.getRandomQuote());
